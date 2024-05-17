@@ -21,9 +21,8 @@ RUN apt-get update && apt-get install -y \
     git
 
 RUN pip install --upgrade pip \
-    && pip install ipykernel poetry
-    # && poetry config virtualenvs.create false \
-    # && poetry install --no-dev
+    && pip install poetry \
+    && poetry config virtualenvs.create false
 # ********************************************************
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
