@@ -20,6 +20,8 @@ WORKDIR /workspaces
 RUN apt-get update && apt-get install -y \
     git \
     curl
+    
+ENV PATH /root/.local/bin:$PATH
 
 RUN curl -sSL https://install.python-poetry.org | python3 - \
     && poetry config virtualenvs.create false
