@@ -18,12 +18,13 @@ RUN groupadd --gid $USER_GID $USERNAME \
 WORKDIR /workspaces
 
 RUN apt-get update && apt-get install -y \
-    git
+    git \
+    curl
 
-RUN pip install --upgrade pip \
-    && pip install poetry \
+RUN curl -sSL https://install.python-poetry.org | python3 - \
     && poetry config virtualenvs.create false
 # ********************************************************
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
+RUN echo 'alias poetry="sudo /root/.local/bin/poetry"' >> ~/.bashrc
