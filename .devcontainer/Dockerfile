@@ -1,4 +1,5 @@
-FROM python:slim-bullseye
+ARG VARIANT="3.12-bullseye"
+FROM python:$VARIANT
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
@@ -9,24 +10,15 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     # [Optional] Add sudo support. Omit if you don't need to install software after connecting.
     && apt-get update \
-    && apt-get install -y sudo \
+    && apt-get install -y \
+    sudo git curl \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
-    #
-# ********************************************************
-# * Anything else you want to do like clean up goes here *
+
+USER $USERNAME
 WORKDIR /workspaces
 
-RUN apt-get update && apt-get install -y \
-    git \
-    curl
-    
-ENV PATH /root/.local/bin:$PATH
-
 RUN curl -sSL https://install.python-poetry.org | python3 - \
-    && poetry config virtualenvs.create false
-# ********************************************************
+    && echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 
-# [Optional] Set the default user. Omit if you want to keep the default as root.
-USER $USERNAME
-RUN echo 'alias poetry="sudo /root/.local/bin/poetry"' >> ~/.bashrc
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
