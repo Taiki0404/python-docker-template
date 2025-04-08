@@ -1,4 +1,4 @@
-ARG VARIANT="3.12-bullseye"
+ARG VARIANT="3.13-bullseye"
 FROM python:$VARIANT
 
 ARG USERNAME=vscode
