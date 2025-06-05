@@ -14,7 +14,10 @@
 				"ms-toolsai.jupyter",
 				"charliermarsh.ruff",
 				"ms-python.mypy-type-checker",
-				"christian-kohler.path-intellisense"
+				"njpwerner.autodocstring",
+				"christian-kohler.path-intellisense",
+				"kisstkondoros.vscode-gutter-preview",
+				"mechatroner.rainbow-csv"
 			]
 		}
 	},
