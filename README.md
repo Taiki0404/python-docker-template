@@ -8,15 +8,20 @@ Pythonのパッケージ管理にはpoetryを使用
 
 ## Extensions
 
-以下の拡張機能を導入（主な用途）
+以下の拡張機能が自動でインストールされる
 
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AIコード補完
-- [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) - AIによるコードレビュー・サポート
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) - Git履歴の可視化
-- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - Python開発環境
-- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) - Jupyter Notebookのサポート
-- [Mypy Type Checker](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker) - 型チェック（Mypy）
-- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) - PythonのLinter・フォーマッター
+- GitHub Copilot (`GitHub.copilot`)
+- GitHub Copilot Chat (`GitHub.copilot-chat`)
+- Git Graph (`mhutchie.git-graph`)
+- GitLens (`eamodio.gitlens`)
+- Python (`ms-python.python`)
+- Jupyter (`ms-toolsai.jupyter`)
+- Ruff (`charliermarsh.ruff`)
+- Mypy Type Checker (`ms-python.mypy-type-checker`)
+- AutoDocstring (`njpwerner.autodocstring`)
+- Path Intellisense (`christian-kohler.path-intellisense`)
+- Gutter Preview (`kisstkondoros.vscode-gutter-preview`)
+- Rainbow CSV (`mechatroner.rainbow-csv`)
 
 ## Usage
 
