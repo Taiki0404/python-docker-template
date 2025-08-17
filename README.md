@@ -1,14 +1,14 @@
 # python-docker-template
 
-DevContainerでPythonの開発環境を作るためのテンプレート
+DevContainerでPythonの開発環境を作るためのテンプレートです。
 
-Pythonのパッケージ管理にはpoetryを使用
+Pythonのパッケージ管理にはpoetryを使用します。
 
-※ [Poetryの公式ドキュメント](https://python-poetry.org/docs/configuration#virtualenvscreate) では仮想環境の作成が推奨されているため、このテンプレートでもDockerコンテナ内で仮想環境を作成し、依存関係を分離する
+※ [Poetryの公式ドキュメント](https://python-poetry.org/docs/configuration#virtualenvscreate) では、Dockerを利用する場合でも仮想環境を作成することが推奨されているため、このテンプレートでもDockerコンテナ内で仮想環境を作成して依存関係を分離します。
 
 ## Extensions
 
-以下の拡張機能が自動でインストールされる
+以下のVSCode拡張機能が自動でインストールされます。
 
 - GitHub Copilot (`GitHub.copilot`)
 - GitHub Copilot Chat (`GitHub.copilot-chat`)
@@ -25,8 +25,8 @@ Pythonのパッケージ管理にはpoetryを使用
 
 ## Usage
 
-1. [Docker Hub](https://hub.docker.com/_/python/) からPythonのタグ（バージョン）を選択
-2. 選択したタグを `Dockerfile` に記入
-3. VSCodeで `Reopen in Container` を実行（DevContainer環境を起動）
-4. コンテナ内で `poetry init` を実行し、プロジェクトをセットアップ
-5. 必要なパッケージを `poetry add <package-name>` で追加
+1. [Docker Hub](https://hub.docker.com/_/python/) から任意のPythonのタグ（バージョン）を選択する
+2. 選択したタグを `Dockerfile` に記入する
+3. VSCodeで `Reopen in Container` を実行する
+4. コンテナ内で `poetry init` を実行し、プロジェクトをセットアップする
+5. 必要なパッケージを `poetry add <package-name>` で追加する
