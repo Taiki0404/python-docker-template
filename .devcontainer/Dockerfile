@@ -21,4 +21,5 @@ WORKDIR /workspace
 RUN curl -sSL https://install.python-poetry.org | python3 - \
     && echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 
+ENV PYTHONPATH /workspace:$PYTHONPATH
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
