@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: python-docker-template
+    working_dir: /workspace
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    # --- if you want to use GPU in container, uncomment below. ---
+    # shm_size: '32gb'
+    # command: /bin/bash
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
+    volumes:
+      - type: bind
+        source: ..
+        target: /workspace

@@ -16,7 +16,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 USER $USERNAME
-WORKDIR /workspaces
+WORKDIR /workspace
 
 RUN curl -sSL https://install.python-poetry.org | python3 - \
     && echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
